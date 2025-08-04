@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { TrendingDown, Users, Building, Calendar } from "lucide-react";
+import { TrendingDown, Users, Building, Calendar, Receipt, ExternalLink, Lightbulb, ClipboardList, Brain } from "lucide-react";
 import Filters from "@/components/Filters";
 import MetricCard from "@/components/MetricCard";
 import DonutChart from "@/components/DonutChart";
@@ -79,8 +79,27 @@ const RetirosImpuesto = () => {
           className="bg-card border border-border rounded-lg p-6 shadow-[var(--shadow-card)]"
         >
           <div className="space-y-6">
+            <div className="bg-primary/5 border border-primary/20 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-foreground mb-2 flex items-center gap-2">
+                <div className="bg-yellow-100 rounded-full p-2">
+                  <Brain className="h-5 w-5 text-yellow-600" />
+                </div>
+                Interpretación del Dashboard
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Este panel presenta los retiros oficiales de bonos de carbono registrados en COLCX, una herramienta clave para identificar 
+                actores del mercado con necesidades de compensación. A partir de esta información puedes detectar oportunidades de venta, 
+                comprender los tipos de proyectos más demandados y evaluar el tamaño y comportamiento del mercado colombiano de créditos de carbono.
+              </p>
+            </div>
+
             <div>
-              <h2 className="text-2xl font-bold text-foreground mb-3">🧾 Resumen de Retiros de Bonos de Carbono (COLCX)</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-3 flex items-center gap-2">
+                <div className="bg-yellow-100 rounded-full p-2">
+                  <Receipt className="h-6 w-6 text-yellow-600" />
+                </div>
+                Resumen de Retiros de Bonos de Carbono (COLCX)
+              </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Este conjunto de datos presenta los retiros de créditos de carbono registrados oficialmente en el sistema COLCX en Colombia. 
                 Estos retiros representan acciones tanto regulatorias (por el Impuesto al Carbono) como voluntarias de empresas que buscan 
@@ -93,16 +112,21 @@ const RetirosImpuesto = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-primary hover:text-primary/80 font-medium text-sm"
                 >
-                  🔗 Verificar fuente oficial
-                  <svg className="w-3 h-3 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
+                  <div className="bg-yellow-100 rounded-full p-1 mr-2">
+                    <ExternalLink className="w-4 h-4 text-yellow-600" />
+                  </div>
+                  Verificar fuente oficial
                 </a>
               </div>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">💡 ¿Por qué es valioso para tu negocio?</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+                <div className="bg-yellow-100 rounded-full p-2">
+                  <Lightbulb className="h-5 w-5 text-yellow-600" />
+                </div>
+                ¿Por qué es valioso para tu negocio?
+              </h3>
               <p className="text-muted-foreground mb-3">Si estás en el negocio de comercialización de bonos de carbono, este dataset te permite:</p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
                 <li>Identificar empresas activas compradoras (clientes potenciales)</li>
@@ -114,7 +138,12 @@ const RetirosImpuesto = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">📋 Explicación de las columnas del dataset</h3>
+              <h3 className="text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
+                <div className="bg-yellow-100 rounded-full p-2">
+                  <ClipboardList className="h-5 w-5 text-yellow-600" />
+                </div>
+                Explicación de las columnas del dataset
+              </h3>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm border border-border rounded-lg">
                   <thead className="bg-muted/50">
@@ -159,15 +188,6 @@ const RetirosImpuesto = () => {
                   </tbody>
                 </table>
               </div>
-            </div>
-
-            <div className="bg-primary/5 border border-primary/20 rounded-lg p-4">
-              <h3 className="text-lg font-semibold text-foreground mb-2">🧠 Interpretación del Dashboard</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Este panel presenta los retiros oficiales de bonos de carbono registrados en COLCX, una herramienta clave para identificar 
-                actores del mercado con necesidades de compensación. A partir de esta información puedes detectar oportunidades de venta, 
-                comprender los tipos de proyectos más demandados y evaluar el tamaño y comportamiento del mercado colombiano de créditos de carbono.
-              </p>
             </div>
           </div>
         </motion.div>
