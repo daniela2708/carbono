@@ -3,13 +3,13 @@
 
 export const DATA_CONFIG = {
   // Dataset principal de retiros (Tab 2) - cambiar esta ruta para usar un dataset actualizado
-  RETIROS_DATASET: '/src/data/retiros.csv',
+  RETIROS_DATASET: '/data/retiros.csv',
   
   // Dataset de certificados de emisión (Tab 3 - Withdraw/Retiros Voluntario)
-  CERTIFICADOS_DATASET: '/src/data/platform_emission_certificates.csv',
+  CERTIFICADOS_DATASET: '/data/platform_emission_certificates.csv',
   
   // Dataset de iniciativas (Tab 4 - Proyectos/Iniciativas)
-  INICIATIVAS_DATASET: '/src/data/iniciativas_colcx.csv',
+  INICIATIVAS_DATASET: '/data/iniciativas_colcx.csv',
   
   // Otros datasets del sistema (para referencia)
   PROYECTOS_DATASET: '/data/proyectos_iniciativas.csv',
